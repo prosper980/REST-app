@@ -1,0 +1,16 @@
+services:
+  client:
+    container_name: "client"
+    build: 
+      context: .
+    ports:
+      - 4173:4173
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4173"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

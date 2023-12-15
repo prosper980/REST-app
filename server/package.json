@@ -1,0 +1,37 @@
+{
+  "name": "server_1",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon index.ts",
+    "start": "node ./dist/index.js",
+    "deploy": "prisma migrate deploy && yarn run start"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
+  "packageManager": "yarn@4.0.2",
+  "dependencies": {
+    "@prisma/client": "^5.7.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.2",
+    "@types/passport": "^1.0.16",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "passport": "^0.7.0",
+    "passport-google-oidc": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5",
+    "@types/body-parser": "^1",
+    "@types/cors": "^2",
+    "@types/jsonwebtoken": "^9",
+    "nodemon": "^3.0.1",
+    "prisma": "^5.7.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

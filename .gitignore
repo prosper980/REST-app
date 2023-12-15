@@ -1,0 +1,26 @@
+#server
+/server/.yarn/*
+/server/!.yarn/patches
+/server/!.yarn/plugins
+/server/!.yarn/releases
+/server/!.yarn/sdks
+/server/!.yarn/versions
+/server/node_modules
+/server/.pnp.*
+/server/.env
+/server/dist
+
+#client
+/client/.yarn/*
+/client/!.yarn/patches
+/client/!.yarn/plugins
+/client/!.yarn/releases
+/client/!.yarn/sdks
+/client/!.yarn/versions
+/client/node_modules
+/client/dist
+/client/.vscode
+
+
+
+# Editor directories and files
