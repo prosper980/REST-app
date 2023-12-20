@@ -8,7 +8,7 @@ Setup:
 clone the repo
 
 ```bash
-git git@github.com:prosper980/REST-app.git
+git clone git@github.com:prosper980/REST-app.git
 ```
 
 
