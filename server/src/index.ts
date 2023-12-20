@@ -3,8 +3,8 @@ import "dotenv/config";
 import cors from 'cors'
 import bodyParser from "body-parser";
 
-import {userRoutes} from "./src/api_v1/routes/user-routes";
-import { authUserRequest } from "./src/api_v1/routes/auth-user-reqs-routes";
+import {userRoutes} from "./api_v1/routes/user-routes";
+import { authUserRequest } from "./api_v1/routes/auth-user-reqs-routes";
 
 const app:Application = express();
 app.use(cors());

@@ -2,9 +2,9 @@
   "name": "server_1",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon index.ts",
+    "dev": "nodemon src/index.ts",
     "start": "node ./dist/index.js",
-    "deploy": "prisma migrate deploy && yarn run start"
+    "deploy": "yarn prisma migrate deploy && yarn start"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
