@@ -19,7 +19,7 @@ COPY . .
 
 RUN yarn install
 
-RUN yarn run build
+#RUN yarn build
 
 RUN yarn prisma generate
 

@@ -3,8 +3,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon src/index.ts",
-    "start": "node ./dist/index.js",
-    "deploy": "yarn prisma migrate deploy && yarn start"
+    "start": "node dist/index.js",
+    "deploy": "yarn prisma migrate deploy && yarn build && yarn start"
   },
   "prisma": {
     "schema": "prisma/schema.prisma"
