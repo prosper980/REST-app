@@ -3,6 +3,7 @@ import SignUp from "./components/auth_components/SignupPage";
 import { action as signupAction } from "./actions/signup.action";
 import ErrorPage from "./errorPages/Signup-ErrorPage";
 import Root from "./components/dashboard/Root";
+import {loader as dashBoardLoader} from './loaders/user.dashboard.loader'
 
 
 
@@ -18,7 +19,8 @@ const routes = createBrowserRouter([
     {
         path : "/dashboard",
         element : <Root />,
-        errorElement : <ErrorPage />
+        errorElement : <ErrorPage />,
+        loader : dashBoardLoader
     },
     {
         path : "/login/federated/google",

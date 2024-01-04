@@ -7,7 +7,7 @@ import { ActionFunction, redirect } from 'react-router-dom';
 export const action: ActionFunction = async ({ request }) => {
 
     try {
-        const formData   =  Object.fromEntries(await request.formData());
+        const formData  =  Object.fromEntries(await request.formData());
 
         const { firstName, lastName, email, password, repeatedPassword } = formData;
     
@@ -28,12 +28,11 @@ export const action: ActionFunction = async ({ request }) => {
             timeout : 8000
         });
         
-        console.log(res);
-        
-        console.log(res.data);
-         if(res.status === 201){
+
+
+        if(res.status === 201){
             localStorage.setItem("dashuser", JSON.stringify(res.data));
-         }
+        }
         
         return redirect("/dashboard");
         
