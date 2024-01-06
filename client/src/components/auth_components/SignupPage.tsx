@@ -42,7 +42,7 @@ import FedratedLogins from "./FedratedLogins";
                 <Box sx={{marginTop: 2, display: 'flex', flexDirection:'column', alignItems:'center'}}>   
                 
                     <Box mb={1}>
-                        <SignupHeader />
+                        <SignupHeader main="Sign Up For An Account:" sub="Sign up for an account using" />
                     </Box>      
 
                     

@@ -1,15 +1,20 @@
 import { Typography } from "@mui/material";
 
-const SignupHeader = () => {
+type HeaderProps = {
+    main : string,
+    sub : string
+}
+
+const SignupHeader = ({main,sub}:HeaderProps) => {
 
     return(
         <>
             <Typography sx={{fontSize:"2em",fontWeight:'bold', opacity:0.9}}>
-                Sign Up For An Account
+                {main}
             </Typography>
 
             <Typography sx={{opacity:0.6}}>
-                Sign up for an account using:
+                {sub}
             </Typography>
         </>
     )

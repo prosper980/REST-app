@@ -8,11 +8,12 @@ export const loader:LoaderFunction = async () => {
     try {
 
         const localStorageUserInfo = localStorage.getItem("dashuser");
+    
 
         if(typeof localStorageUserInfo === 'string'){
             const parsedLocalStorgeUserInfo = JSON.parse(localStorageUserInfo);
 
-            console.log(parsedLocalStorgeUserInfo);
+            //console.log(parsedLocalStorgeUserInfo);
         }else{
             redirect('/');
         }

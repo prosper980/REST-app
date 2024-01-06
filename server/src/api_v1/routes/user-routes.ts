@@ -1,6 +1,7 @@
 import express, {Request, Response} from 'express';
 import userSignupController from '../controller/user-signup-controller';
 import googleUserLoginController from '../controller/google-user-login';
+import tokenVerifyController from '../controller/verify-token-controller';
 
 export const userRoutes = express.Router()
 //middlewares here
@@ -27,6 +28,11 @@ userRoutes.post("/signup", async (req:Request, res:Response) => {
 userRoutes.post("/googlelogin",async (req:Request, res:Response) => {
     const data = await googleUserLoginController(req);
     res.status(200).send(data);
+})
+
+userRoutes.post("/verifyToken",(req:Request, res:Response) => {
+    const tokenVerify = tokenVerifyController(req);
+    res.status(200).send(tokenVerify);
 })
 
 

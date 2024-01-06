@@ -3,7 +3,13 @@ import SignUp from "./components/auth_components/SignupPage";
 import { action as signupAction } from "./actions/signup.action";
 import ErrorPage from "./errorPages/Signup-ErrorPage";
 import Root from "./components/dashboard/Root";
-import {loader as dashBoardLoader} from './loaders/user.dashboard.loader'
+import SignIn from "./components/auth_components/Signin";
+
+import {loader as dashBoardLoader} from "./loaders/user.dashboard.loader"
+import { loader as userLoginLoader } from "./loaders/auth.loader"
+
+import { action as signinAction } from "./actions/signin.action"
+
 
 
 
@@ -14,6 +20,7 @@ const routes = createBrowserRouter([
         path : "/",
         element : <SignUp />,
         action: signupAction,
+        loader : userLoginLoader,
         errorElement : <ErrorPage />
     },
     {
@@ -23,8 +30,10 @@ const routes = createBrowserRouter([
         loader : dashBoardLoader
     },
     {
-        path : "/login/federated/google",
-        element : <h2> google </h2>
+        path : "/signin",
+        element : <SignIn />,
+        action : signinAction
+
     } 
 ])
 
