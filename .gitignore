@@ -9,6 +9,7 @@
 /server/.pnp.*
 /server/.env
 /server/dist
+/server/note.txt
 
 #client
 /client/.yarn/*
@@ -20,6 +21,7 @@
 /client/node_modules
 /client/dist
 /client/.vscode
+/client/note.txt
 
 
 

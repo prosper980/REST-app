@@ -2,17 +2,20 @@ import express, {Request, Response} from 'express';
 import userSignupController from '../controller/user-signup-controller';
 import googleUserLoginController from '../controller/google-user-login';
 import tokenVerifyController from '../controller/verify-token-controller';
+import userSigninController from '../controller/user-sigin-controller';
 
 export const userRoutes = express.Router()
 //middlewares here
 
 
+//remove 
 userRoutes.get("/", (req:Request, res:Response) => {
     res.send("user");
 })
 
-userRoutes.post("/signin", (req: Request, res:Response) => {
-    console.log(req.body);
+userRoutes.post("/signin", async (req: Request, res:Response) => {
+    const data = await userSigninController(req);
+    res.send(data).status(data.statusCode);
 })
 
 userRoutes.post("/signup", async (req:Request, res:Response) => {
