@@ -2,7 +2,7 @@ import { Alert, AlertColor} from "@mui/material"
 
 interface AlertComponentProps  {
     alertSeverity : AlertColor
-    alertMessage : string
+    alertMessage : string 
 }
 
 

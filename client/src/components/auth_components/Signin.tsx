@@ -1,14 +1,14 @@
 import { ThemeProvider } from "@emotion/react"
 import theme from "../../theme"
-import { Container, Box, Grid, TextField, Button, Typography } from "@mui/material";
+import { Container, Box, Grid, TextField, Button, Alert } from "@mui/material";
 import { Form, useActionData } from "react-router-dom";
 import FedratedLogins from "./FedratedLogins";
 import SignupHeader from "./SignupHeader";
 import SignupInfo from "../alert/SignupInfo";
 
 const SignIn = () => {
-    const actionData = useActionData();
-    console.log(actionData);
+    const error = useActionData() as string;
+    console.log(error);
     return(
     <>
         <ThemeProvider theme={theme}>
@@ -40,16 +40,9 @@ const SignIn = () => {
                                 Signin
                             </Button>
 
-                            <Grid>
-                                <Grid item xs={12}>
-                                    <Typography variant="h2">
-                                        { actionData ? actionData : " "}
-                                    </Typography>
-                                </Grid>
-                            </Grid>
+                            { error ? <SignupInfo alertSeverity={`info`} alertMessage={error} /> : " "}
 
                         </Form>
-
                     </Box>
                 </Box>
             </Container>
