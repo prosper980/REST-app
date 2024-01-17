@@ -87,7 +87,7 @@ import FedratedLogins from "./FedratedLogins";
                                 Sign up
                             </Button>
 
-                            <UserAlready location="/signin" alert="I have an account" />
+                            <UserAlready location="/" alert="I have an account" />
 
                         </Form>
 

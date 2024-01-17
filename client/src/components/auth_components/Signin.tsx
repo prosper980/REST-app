@@ -1,10 +1,11 @@
 import { ThemeProvider } from "@emotion/react"
 import theme from "../../theme"
-import { Container, Box, Grid, TextField, Button, Alert } from "@mui/material";
+import { Container, Box, Grid, TextField, Button } from "@mui/material";
 import { Form, useActionData } from "react-router-dom";
 import FedratedLogins from "./FedratedLogins";
 import SignupHeader from "./SignupHeader";
 import SignupInfo from "../alert/SignupInfo";
+import UserAlready from "./UserAlready";
 
 const SignIn = () => {
     const error = useActionData() as string;
@@ -39,6 +40,9 @@ const SignIn = () => {
                             <Button type="submit" fullWidth variant="contained" sx={{mt:2, mb:2, bgcolor:'primary.main'}}>
                                 Signin
                             </Button>
+
+                            <UserAlready location="newuser" alert="I don't have an account" />
+
 
                             { error ? <SignupInfo alertSeverity={`info`} alertMessage={error} /> : " "}
 

@@ -1,6 +1,5 @@
-import { LoaderFunction, redirect } from "react-router-dom";
-import axios, { AxiosResponse } from "axios";
-
+import { LoaderFunction,redirect } from 'react-router-dom';
+import axios,{AxiosResponse} from 'axios';
 
 export const loader:LoaderFunction = async () => {
 
@@ -24,16 +23,17 @@ export const loader:LoaderFunction = async () => {
                 timeout:8000
             })
             
-            if(res.data !== false){
-                return redirect("/dashboard");
+            if(res.data === false){
+                return null;
             }
         } 
 
-        return null;
+        return redirect("/dashboard");
 
     } catch (error) {
         console.error(error)
         return null;
     }
-   
+
 }
+

@@ -1,4 +1,5 @@
 import { LoaderFunction, redirect } from "react-router-dom";
+import tokenVerify from "../services/tokenVerify";
 
 
 export const loader:LoaderFunction = async () => {
@@ -9,11 +10,19 @@ export const loader:LoaderFunction = async () => {
 
         const localStorageUserInfo = localStorage.getItem("dashuser");
     
+        if(!localStorageUserInfo){
+            return redirect("/");
+        }
 
         if(typeof localStorageUserInfo === 'string'){
             const parsedLocalStorgeUserInfo = JSON.parse(localStorageUserInfo);
 
-            //console.log(parsedLocalStorgeUserInfo);
+            const verify = tokenVerify(parsedLocalStorgeUserInfo);
+
+            if(!verify){
+                return redirect("/");
+            }
+
         }else{
             redirect('/');
         }

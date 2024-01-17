@@ -7,6 +7,7 @@ import SignIn from "./components/auth_components/Signin";
 
 import {loader as dashBoardLoader} from "./loaders/user.dashboard.loader"
 import { loader as userLoginLoader } from "./loaders/auth.loader"
+import { loader as signInLoader } from "./loaders/sigin.loader"
 
 import { action as signinAction } from "./actions/signin.action"
 
@@ -17,7 +18,7 @@ import { action as signinAction } from "./actions/signin.action"
 
 const routes = createBrowserRouter([
     {
-        path : "/",
+        path : "/newuser",
         element : <SignUp />,
         action: signupAction,
         loader : userLoginLoader,
@@ -30,9 +31,10 @@ const routes = createBrowserRouter([
         loader : dashBoardLoader
     },
     {
-        path : "/signin",
+        path : "/",
         element : <SignIn />,
-        action : signinAction
+        action : signinAction,
+        loader: signInLoader
 
     } 
 ])
