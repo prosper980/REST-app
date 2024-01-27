@@ -95,7 +95,7 @@ import FedratedLogins from "./FedratedLogins";
                 </Box>
             </Container>
 
-           <PasswordMissMatch warningMessage={warning} componentState={open} />
+           <PasswordMissMatch warningMessage={warning} componentState={open} hideDurationTime={8000}/>
            
         </ThemeProvider>
       </>  

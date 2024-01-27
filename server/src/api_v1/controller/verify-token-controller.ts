@@ -6,6 +6,7 @@ const tokenVerifyController = (req:Request) => {
     const tokenIsValid = tokenVerify(token);
 
     const res = (tokenIsValid) ? true : false;
+    
     return res;
 }
 

@@ -13,7 +13,7 @@ const tokenVerify = async ({ token } : Token ) => {
             const res:AxiosResponse = await axios({
                 method : 'post',
                 url: 'http://localhost:5174/user/verifyToken',
-                data: token ,
+                data: {token} ,
                 timeout:8000
             })
             

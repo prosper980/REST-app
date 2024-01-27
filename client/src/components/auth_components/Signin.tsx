@@ -4,12 +4,13 @@ import { Container, Box, Grid, TextField, Button } from "@mui/material";
 import { Form, useActionData } from "react-router-dom";
 import FedratedLogins from "./FedratedLogins";
 import SignupHeader from "./SignupHeader";
-import SignupInfo from "../alert/SignupInfo";
 import UserAlready from "./UserAlready";
+import SignupInfo from "../alert/SignupInfo";
 
 const SignIn = () => {
+
     const error = useActionData() as string;
-    console.log(error);
+
     return(
     <>
         <ThemeProvider theme={theme}>
@@ -41,11 +42,9 @@ const SignIn = () => {
                                 Signin
                             </Button>
 
+                            {error ? <SignupInfo alertSeverity="info" alertMessage={error}/> : " "}
+
                             <UserAlready location="newuser" alert="I don't have an account" />
-
-
-                            { error ? <SignupInfo alertSeverity={`info`} alertMessage={error} /> : " "}
-
                         </Form>
                     </Box>
                 </Box>

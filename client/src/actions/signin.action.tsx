@@ -13,14 +13,13 @@ export const action : ActionFunction = async ( { request } ) => {
         timeout : 8000
     });
 
-    const {id, statusCode, token, errorMessage} = res.data;
+    const {statusCode ,errorMessage} = res.data;
 
-    console.log(id, statusCode, token);
+    if(statusCode === 200){
+        localStorage.setItem("dashuser", JSON.stringify(res.data));
 
-    if(statusCode !== 200){
-        return errorMessage;
+        return redirect("/dashboard");
     }
-
-    return redirect("/dashboard");
+    return errorMessage;
 
 } 
