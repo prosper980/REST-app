@@ -23,5 +23,5 @@ model Profile {
   id Int @id @default(autoincrement())
   location String?
   videoCount Int?
-  subscribersCount Int? 
+  subscribersCount Int?
 }

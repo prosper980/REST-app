@@ -15,8 +15,6 @@ const passwordVerify = async( {email, password} ) => {
             }
         })
 
-
-
         return password
 
     } catch (error) {

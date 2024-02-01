@@ -2,21 +2,33 @@ import jwt from 'jsonwebtoken';
 
 
 const tokenVerify = (token : string) => {
-    
+
     try {
-        
+
+                
         const verifyToken = jwt.verify(token, process.env.JWT_SECRET);
         if(!verifyToken){
-            console.log(verifyToken);
+            console.log(token);
             return false;
         }
 
+        //console.log(verifyToken);
+
         return true;
+        
 
     } catch (error) {
-        console.log(error)
-        return false;
+        if(error){
+            console.log(error);
+            return false;
+        }
     }
+    
+    
+
+
+
+   
 
 } 
 

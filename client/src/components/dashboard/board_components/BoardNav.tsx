@@ -1,18 +1,21 @@
-import { Grid } from "@mui/material"
+import { Box} from "@mui/material"
+import BoardSearch from "./BoardNavSearch";
+import NavButton from "./NavButton";
 
 const NavBoard = () => {
     
     return(
         <>
-            <Grid container>
-                    <Grid item>
-                        {`search`}
-                    </Grid>
+            <Box sx={{display:"flex", justifyContent:"space-between",alignContent:"center", padding:0.5, backgroundColor:"white"}}>
 
-                    <Grid item>
-                        {`buttons`}
-                    </Grid>
-            </Grid>
+                <Box>
+                    <BoardSearch />
+                </Box>
+
+                <Box>
+                    <NavButton />
+                </Box>
+            </Box>
         </>
     )
 }
