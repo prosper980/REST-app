@@ -1,17 +1,14 @@
 import express,{Request, Response} from 'express';
+import validTokenVerify from '../middleware/valid-token-verify-middleware';
 
 
 export const authUserRequest = express.Router();
 
 //middleware here
+authUserRequest.use(validTokenVerify);
 
 
-authUserRequest.get("/", (req:Request, res:Response) => {
-    res.send("user");
-    console.log("auth user");
-})
-
-authUserRequest.get("/auth", (req: Request, res: Response) => {
+authUserRequest.get("/", (req: Request, res: Response) => {
     res.send("Authenticated user");
     console.log("endpoint");
 })

@@ -23,6 +23,7 @@ const userSignupController = async (userData : UserData) : Promise<Data> => {
 
     const { firstName, lastName, email, password, repeatedPassword } = userData;
 
+
     if(!firstName || !lastName || !email || !password || !repeatedPassword){
   
         return { errorMessage : "All fields are required", statusCode : 401 };

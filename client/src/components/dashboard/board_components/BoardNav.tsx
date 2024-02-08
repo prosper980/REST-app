@@ -6,7 +6,7 @@ const NavBoard = () => {
     
     return(
         <>
-            <Box sx={{display:"flex", justifyContent:"space-between",alignContent:"center", padding:0.5, backgroundColor:"white"}}>
+            <Box sx={{display:"flex", justifyContent:"space-between",alignContent:"center", padding:0.5, backgroundColor:"#fafafa"}}>
 
                 <Box>
                     <BoardSearch />

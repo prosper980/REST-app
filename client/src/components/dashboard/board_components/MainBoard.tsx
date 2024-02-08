@@ -5,7 +5,7 @@ const MainBoard = () => {
     
     return(
         <>
-            <Box sx={{height: "100%", bgcolor:'#45ff'}}>
+            <Box sx={{height: "100%", backgroundColor:'#dedede'}}>
                 <NavBoard />
             </Box>
         </>

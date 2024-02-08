@@ -17,6 +17,8 @@ const tokenVerify = async ({ token } : Token ) => {
                 timeout:8000
             })
             
+            console.log(res.data);
+
             return res.data ? true : false;
 
     } catch (error) {

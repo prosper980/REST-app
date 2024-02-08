@@ -21,7 +21,8 @@ app.get("/", (req:Request, res:Response) => {
 app.use('/user', userRoutes);
 
 //authenticated user reqs
-app.use("/auth-user", authUserRequest);
+//no controller
+app.use("/auth", authUserRequest);
 
 
 app.listen(PORT, () => {

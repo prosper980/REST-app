@@ -17,7 +17,7 @@ const signUpUserService = async (firstName : string , lastName : string, email :
         
         const prisma = new PrismaClient();
 
-        const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn : '1h' });
+        const token = jwt.sign({data : email }, process.env.JWT_SECRET, { expiresIn : '1h' });
 
         const fullName = firstName.concat(" ", lastName);
 

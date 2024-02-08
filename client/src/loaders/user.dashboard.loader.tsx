@@ -23,6 +23,10 @@ export const loader:LoaderFunction = async () => {
                 return redirect("/");
             }
 
+            //send valid token to get user data
+
+            
+
         }else{
             redirect('/');
         }

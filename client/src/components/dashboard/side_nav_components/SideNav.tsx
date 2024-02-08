@@ -7,7 +7,7 @@ const MainNav = () =>{
     return(
         <>
             <ThemeProvider theme={theme}>
-                <Grid container sx={{display:'flex', flexDirection:'column'}}>
+                <Grid container sx={{display:'flex', flexDirection:'column', backgroundColor:"#fafafa"}}>
                     <Grid item xs={12}>
                         <Logo />
                     </Grid>
